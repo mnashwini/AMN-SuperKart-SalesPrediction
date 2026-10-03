@@ -1,0 +1,7 @@
+{
+    "model": "Gradient Boosting Tuned",
+    "test_RMSE": 288.1027959725848,
+    "test_Adj_R-square": 0.9265163892043183,
+    "RMSE_gap": 25.99885301882813,
+    "Adj_R-square_gap": 0.01283176887336912
+}
