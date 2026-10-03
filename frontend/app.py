@@ -57,11 +57,6 @@ store_age = st.number_input(
 
 # Collect user input for categorical features
 
-product_id = st.selectbox(
-    "Product ID",
-    category_options["Product_Id"]
-)
-
 product_sugar_content = st.selectbox(
     "Product Sugar Content",
     category_options["Product_Sugar_Content"]
@@ -101,6 +96,23 @@ product_perishability = st.selectbox(
     "Product Perishability",
     category_options["Product_Perishability"]
 )
+
+# Product_Id is retained in the model as a categorical feature.
+# Since displaying 8700+ Product IDs is not practical, a valid Product ID
+# is automatically selected based on the first two characters, which
+# correspond to the selected Product Category.
+
+valid_product_ids = [
+    product_id
+    for product_id in category_options["Product_Id"]
+    if product_id[:2] == product_category
+]
+
+if valid_product_ids:
+    product_id = valid_product_ids[0]
+else:
+    product_id = None
+    st.error("No valid Product ID found for the selected Product Category.")
 
 # Convert user input into a DataFrame
 
