@@ -38,16 +38,8 @@ product_mrp = st.number_input(
     value=100.0
 )
 
-store_establishment_year = st.number_input(
-    "Store Establishment Year",
-    min_value=1900,
-    max_value=2026,
-    value=2000,
-    step=1
-)
-
-store_age = st.number_input(
-    "Store Age",
+store_age_years = st.number_input(
+    "Store Age Years",
     min_value=0,
     value=10,
     step=1
@@ -59,16 +51,6 @@ store_age = st.number_input(
 product_sugar_content = st.selectbox(
     "Product Sugar Content",
     category_options["Product_Sugar_Content"]
-)
-
-product_type = st.selectbox(
-    "Product Type",
-    category_options["Product_Type"]
-)
-
-store_id = st.selectbox(
-    "Store ID",
-    category_options["Store_Id"]
 )
 
 store_size = st.selectbox(
@@ -86,32 +68,16 @@ store_type = st.selectbox(
     category_options["Store_Type"]
 )
 
-product_category = st.selectbox(
-    "Product Category",
-    category_options["Product_Category"]
+product_id_char = st.selectbox(
+    "Product ID Char",
+    category_options["Product_Id_char"]
 )
 
-product_perishability = st.selectbox(
-    "Product Perishability",
-    category_options["Product_Perishability"]
+product_type_category = st.selectbox(
+    "Product Type Category",
+    category_options["Product_Type_Category"]
 )
 
-# Product_Id is retained in the model as a categorical feature.
-# Since displaying 8700+ Product IDs is not practical, a valid Product ID
-# is automatically selected based on the first two characters, which
-# correspond to the selected Product Category.
-
-valid_product_ids = [
-    product_id
-    for product_id in category_options["Product_Id"]
-    if product_id[:2] == product_category
-]
-
-if valid_product_ids:
-    product_id = valid_product_ids[0]
-else:
-    product_id = None
-    st.error("No valid Product ID found for the selected Product Category.")
 
 # Convert user input into a DataFrame
 
@@ -123,17 +89,9 @@ input_data = pd.DataFrame([{
 
     "Product_MRP": product_mrp,
 
-    "Store_Establishment_Year": store_establishment_year,
-
-    "Store_Age": store_age,
-
-    "Product_Id": product_id,
+    "Store_Age_Years": store_age_years,
 
     "Product_Sugar_Content": product_sugar_content,
-
-    "Product_Type": product_type,
-
-    "Store_Id": store_id,
 
     "Store_Size": store_size,
 
@@ -141,9 +99,9 @@ input_data = pd.DataFrame([{
 
     "Store_Type": store_type,
 
-    "Product_Category": product_category,
+    "Product_Id_char": product_id_char,
 
-    "Product_Perishability": product_perishability
+    "Product_Type_Category": product_type_category
 
 }])
 
