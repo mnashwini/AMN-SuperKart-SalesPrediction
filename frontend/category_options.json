@@ -1,0 +1,56 @@
+{
+    "Product_Sugar_Content": [
+        "Low Sugar",
+        "No Sugar",
+        "Regular"
+    ],
+    "Product_Type": [
+        "Baking Goods",
+        "Breads",
+        "Breakfast",
+        "Canned",
+        "Dairy",
+        "Frozen Foods",
+        "Fruits and Vegetables",
+        "Hard Drinks",
+        "Health and Hygiene",
+        "Household",
+        "Meat",
+        "Others",
+        "Seafood",
+        "Snack Foods",
+        "Soft Drinks",
+        "Starchy Foods"
+    ],
+    "Store_Id": [
+        "OUT001",
+        "OUT002",
+        "OUT003",
+        "OUT004"
+    ],
+    "Store_Size": [
+        "High",
+        "Medium",
+        "Small"
+    ],
+    "Store_Location_City_Type": [
+        "Tier 1",
+        "Tier 2",
+        "Tier 3"
+    ],
+    "Store_Type": [
+        "Departmental Store",
+        "Food Mart",
+        "Supermarket Type1",
+        "Supermarket Type2"
+    ],
+    "Product_Category": [
+        "DR",
+        "FD",
+        "NC"
+    ],
+    "Product_Perishability": [
+        "Non-Perishable",
+        "Perishable"
+    ]
+}
