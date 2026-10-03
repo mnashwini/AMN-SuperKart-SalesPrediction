@@ -43,17 +43,13 @@ def predict_sales():
         'Product_Weight': product_data['Product_Weight'],
         'Product_Allocated_Area': product_data['Product_Allocated_Area'],
         'Product_MRP': product_data['Product_MRP'],
-        'Store_Establishment_Year': product_data['Store_Establishment_Year'],
-        'Store_Age': product_data['Store_Age'],
-        'Product_Id': product_data['Product_Id'],
+        'Store_Age_Years': product_data['Store_Age_Years'],
         'Product_Sugar_Content': product_data['Product_Sugar_Content'],
-        'Product_Type': product_data['Product_Type'],
-        'Store_Id': product_data['Store_Id'],
         'Store_Size': product_data['Store_Size'],
         'Store_Location_City_Type': product_data['Store_Location_City_Type'],
         'Store_Type': product_data['Store_Type'],
-        'Product_Category': product_data['Product_Category'],
-        'Product_Perishability': product_data['Product_Perishability']
+        'Product_Id_char': product_data['Product_Id_char'],
+        'Product_Type_Category': product_data['Product_Type_Category']
     }
 
 
